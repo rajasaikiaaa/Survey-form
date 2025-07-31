@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Travel Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">Adventure Travel Survey</h1>
+            <p id="description">Help us plan your dream vacation!</p>
+        </header>
+
+        <main>
+            <form id="survey-form" action="/submit-survey" method="POST">
+                <div class="form-group">
+                    <label for="name" id="name-label" class="required">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="e.g. Alex Johnson">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" id="email-label" class="required">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="e.g. alex@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="age" id="number-label" class="required">Age</label>
+                    <input type="number" id="number" name="age" min="18" max="100" required placeholder="Between 18-100">
+                </div>
+
+                <div class="form-group">
+                    <label for="dropdown" class="required">Favorite Travel Activity</label>
+                    <select id="dropdown" name="activity" required>
+                        <option value="" disabled selected>Select your activity</option>
+                        <option value="hiking">Hiking</option>
+                        <option value="beach">Beach Relaxation</option>
+                        <option value="city">City Exploration</option>
+                        <option value="cultural">Cultural Experiences</option>
+                        <option value="adventure">Adventure Sports</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>Travel Frequency</legend>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="frequent" name="frequency" value="frequent" checked>
+                            <label for="frequent">Frequent Traveler (5+ trips/year)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="occasional" name="frequency" value="occasional">
+                            <label for="occasional">Occasional (2-4 trips/year)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="rare" name="frequency" value="rare">
+                            <label for="rare">Rarely (0-1 trips/year)</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Dream Destinations (Select all that apply)</legend>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="japan" name="destinations" value="japan">
+                            <label for="japan">Japan</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="italy" name="destinations" value="italy">
+                            <label for="italy">Italy</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="new-zealand" name="destinations" value="new-zealand">
+                            <label for="new-zealand">New Zealand</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="peru" name="destinations" value="peru">
+                            <label for="peru">Peru</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="south-africa" name="destinations" value="south-africa">
+                            <label for="south-africa">South Africa</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="comments">Your Dream Vacation Story</label>
+                    <textarea id="comments" name="comments" placeholder="Tell us about your ideal vacation..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="newsletter">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        Subscribe to our adventure newsletter
+                    </label>
+                </div>
+
+                <button type="submit" id="submit">Submit Adventure Survey</button>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <p>© 2025 Adventure Travel Co. | All your dreams are belong to us | Made by Raja Saikia</p>
+        </footer>
+    </div>
+</body>
+</html>
